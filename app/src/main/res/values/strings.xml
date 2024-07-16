@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">ConvertationApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_99_9999">99.9999</string>
+    <string name="рублей_рф">Рублей РФ</string>
+    <string name="equals_symbol">=</string>
+    <string name="date">Дата: </string>
+    <string name="_16_07_2024">16.07.2024</string>
+    <string name="общий_список_валют">Общий список курсов валют</string>
+    <string name="конвертер">Конвертер</string>
+    <string name="общий_список">Общий список</string>
 </resources>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".presentation.secondfragment.DetailFragment">
+
+    <TextView
+        android:id="@+id/spacer"
+        android:layout_width="@dimen/_126dp"
+        android:layout_height="@dimen/_21dp"
+        android:background="@drawable/rounded_image2"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/white"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardItemView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:layout_constraintVertical_weight="1"
+        tools:text="Валюта"
+        tools:visibility="visible" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardItemView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:background="@drawable/rounded_image3"
+        android:paddingBottom="@dimen/_16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/spacer"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/nameOfCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Полное название валюты" />
+
+        <TextView
+            android:id="@+id/nominalOfCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_21dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/nameOfCurrency"
+            app:layout_constraintTop_toTopOf="@+id/nameOfCurrency"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/currencyShort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/nominalOfCurrency"
+            app:layout_constraintStart_toEndOf="@+id/nominalOfCurrency"
+            app:layout_constraintTop_toTopOf="@+id/nominalOfCurrency"
+            tools:text="USD" />
+
+        <TextView
+            android:id="@+id/equalsSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:text="@string/equals_symbol"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/currencyShort"
+            app:layout_constraintStart_toEndOf="@+id/currencyShort"
+            app:layout_constraintTop_toTopOf="@+id/currencyShort" />
+
+
+        <TextView
+            android:id="@+id/currencyValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:text="@string/_99_9999"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/equalsSymbol"
+            app:layout_constraintStart_toEndOf="@+id/equalsSymbol"
+            app:layout_constraintTop_toTopOf="@+id/equalsSymbol" />
+
+        <TextView
+            android:id="@+id/textRubles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:text="@string/рублей_рф"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/currencyValue"
+            app:layout_constraintStart_toEndOf="@+id/currencyValue"
+            app:layout_constraintTop_toTopOf="@+id/currencyValue" />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/iconRedCircle"-->
+<!--            android:layout_width="@dimen/_24dp"-->
+<!--            android:layout_height="@dimen/_24dp"-->
+<!--            android:layout_marginTop="@dimen/_8dp"-->
+<!--            android:src="@drawable/circle_red"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/nominalOfCurrency"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/nominalOfCurrency" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/currentDate"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/_8dp"-->
+<!--            android:text="@string/date"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="@dimen/_16sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/iconRedCircle"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/iconRedCircle"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/iconRedCircle" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/currentDateValue"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/_8dp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="@dimen/_16sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/currentDate"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/currentDate"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/currentDate"-->
+<!--            tools:text="@string/_16_07_2024" />-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

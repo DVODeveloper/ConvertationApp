@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+    <color name="black">#0C0C0C</color>
+    <color name="black2">#101112</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white2">#FFFFFF</color>
+    <color name="cardColor1">#1D1E20</color>
+    <color name="cardColorBlue">#2261BC</color>
+    <color name="colorCardMainScreen01">#2F3035</color>
+    <color name="colorCardMainScreen02">#3E3F43</color>
+    <color name="colorCardMainScreen03">#242529</color>
+    <color name="colorGrayLine">#5E5F61</color>
+    <color name="colorLightGray">#9F9F9F</color>
+    <color name="colorGreenButton">#3A633B</color>
+
+    <color name="switch_thumb_color">#FFFFFF</color> <!--  цвет для переключателя -->
+    <color name="switch_track_color">#5E5F61</color> <!--  цвет для фона переключателя -->
+
+    <color name="switch_thumb2_color">#2261BC</color> <!--  цвет для переключателя -->
+    <color name="switch_track2_color">#153D77</color> <!--  цвет для фона переключателя -->
 </resources>
