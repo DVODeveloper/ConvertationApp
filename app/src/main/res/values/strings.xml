@@ -10,4 +10,8 @@
     <string name="общий_список_валют">Общий список курсов валют</string>
     <string name="конвертер">Конвертер</string>
     <string name="общий_список">Общий список</string>
+    <string name="конвертер_валют">Конвертер валют</string>
+    <string name="введите_сумму">Введите сумму</string>
+    <string name="значение_в_рублях">Значение в рублях</string>
+    <string name="конвертировать">Конвертировать</string>
 </resources>

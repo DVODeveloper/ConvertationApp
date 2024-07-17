@@ -6,6 +6,9 @@
     <color name="white2">#FFFFFF</color>
     <color name="cardColor1">#1D1E20</color>
     <color name="cardColorBlue">#2261BC</color>
+    <color name="ButtonBlue">#2261BC</color>
+    <color name="ButtonBlueFocus">#0950B8</color>
+    <color name="ButtonBluePressed">#0D6FFF</color>
     <color name="colorCardMainScreen01">#2F3035</color>
     <color name="colorCardMainScreen02">#3E3F43</color>
     <color name="colorCardMainScreen03">#242529</color>
