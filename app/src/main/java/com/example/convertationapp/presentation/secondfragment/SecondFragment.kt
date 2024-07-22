@@ -30,7 +30,6 @@ class SecondFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // TODO: Use the ViewModel
     }
 
     override fun onCreateView(
@@ -40,6 +39,7 @@ class SecondFragment : Fragment() {
         _binding = FragmentSecondBinding.inflate(inflater, container, false)
 
         setupAdapter()
+
 
         return binding.root
     }
@@ -53,13 +53,20 @@ class SecondFragment : Fragment() {
         listAdapter = ItemListAdapterForFirstScreen()
         binding.rvCurrenciesList.adapter = listAdapter
 
-        CoroutineScope(Dispatchers.IO).launch {
-            val responseList = RetrofitInstance.apiService.getCurrenciesList()
+        viewModel.getList()
+        viewModel.listOfCurrency.observe(viewLifecycleOwner, {list ->
+            listAdapter.submitList(list)
+        })
 
-            withContext(Dispatchers.Main) {
-                binding.apply { listAdapter.submitList(responseList.Valute.values.toList()) }
-            }
-        }
+
+
+//        CoroutineScope(Dispatchers.IO).launch {
+//            val responseList = RetrofitInstance.apiService.getCurrenciesList()
+//
+//            withContext(Dispatchers.Main) {
+//                binding.apply { listAdapter.submitList(responseList.Valute.values.toList()) }
+//            }
+//        }
     }
 
     companion object {
