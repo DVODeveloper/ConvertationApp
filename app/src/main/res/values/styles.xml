@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="NoUnderlineEditTextStyle" parent="Theme.MaterialComponents.Light">
+        <item name="boxBackgroundMode">none</item>
+        <item name="android:background">@drawable/no_underline_edit_text</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingStart">0dp</item>
+    </style>
+
+    <style name="CustomSwitchStyle" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="thumbTint">@color/switch_thumb_color</item> <!-- Цвет переключателя -->
+        <item name="trackTint">@color/switch_track_color</item> <!-- Цвет фона -->
+    </style>
+
+    <style name="CustomSwitchStyle2" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="thumbTint">@color/switch_thumb2_color</item> <!-- Цвет переключателя -->
+        <item name="trackTint">@color/switch_track2_color</item> <!-- Цвет фона -->
+    </style>
+</resources>
