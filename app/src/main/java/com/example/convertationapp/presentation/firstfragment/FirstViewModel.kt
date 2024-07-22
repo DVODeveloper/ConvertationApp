@@ -1,6 +1,7 @@
 package com.example.convertationapp.presentation.firstfragment
 
 import android.text.Editable
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -16,8 +17,14 @@ class FirstViewModel : ViewModel() {
     private val getListForSpinnerUseCase = GetListForSpinnerUseCase(repository)
     private val convertationCurrencyUseCase = ConvertationCurrencyUseCase(repository)
 
+
+
     val listForSpinner = repository.currencyListName
     val convertationResult: MutableLiveData<Double> get() = repository.cost
+
+    private val _selectedItem = MutableLiveData<String>()
+    val selectedItem: LiveData<String>
+        get() = _selectedItem
 
     fun getListCountriesForSpinner() {
         viewModelScope.launch {
@@ -32,5 +39,9 @@ class FirstViewModel : ViewModel() {
                 convertationCurrencyUseCase.convertationCurrency(choosenCharCode, amount).value
             convertationResult.postValue(result)
         }
+    }
+
+    fun setSelectedItem(item: String) {
+        _selectedItem.value = item
     }
 }

@@ -44,6 +44,20 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.getListCountriesForSpinner()
+
+        viewModel.selectedItem.observe(viewLifecycleOwner) { selectedItem ->
+            selectedItem?.let {
+                val position = listAdapter.getPosition(it)
+                binding.spinner.setSelection(position)
+            }
+        }
+
+        binding.actionButtonFirstScreen.setOnClickListener {
+            val amountOfCurrency = binding.amountOfCurrency.text.toString()
+            Log.d("FirstFragment", "Выбранный элемент: ${viewModel.selectedItem.value} и сумма: $amountOfCurrency")
+
+            viewModel.convertationCurrency(viewModel.selectedItem.value!!, amountOfCurrency)
+        }
     }
 
     override fun onDestroyView() {
@@ -75,14 +89,9 @@ class FirstFragment : Fragment() {
                 id: Long
             ) {
                 if (view != null) {
-                    val selectedItem = parent.getItemAtPosition(position).toString()
+                    var selectedItem = parent.getItemAtPosition(position).toString()
 
-                    buttonResult.setOnClickListener {
-                        val amountOfCurrency = binding.amountOfCurrency.text.toString()
-                        Log.d("FirstFragment", "Выбранный элемент: $selectedItem и сумма: $amountOfCurrency")
-
-                        viewModel.convertationCurrency(selectedItem, amountOfCurrency)
-                    }
+                    viewModel.setSelectedItem(selectedItem)
                 } else {
                     Log.d("FirstFragment", "View is null in onItemSelected")
                 }
